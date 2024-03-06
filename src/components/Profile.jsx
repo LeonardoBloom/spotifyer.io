@@ -4,7 +4,7 @@ import './Profile.css';
 import { Link } from 'react-router-dom';
 
 
-const Profile = ({userInfo, tracks, artists, playlists}) => {
+const Profile = ({userInfo, tracks, artistas, playlists}) => {
 
   console.log("playlists in profile: ", playlists)
 
@@ -41,10 +41,10 @@ const Profile = ({userInfo, tracks, artists, playlists}) => {
   let popScore = 0
 
   if (!userInfo.error) {
-  TopTracks = manageData(tracks.items, 10)
-  TopArtists = manageArtists(artists.items, 10)
+  TopTracks = tracks.items
+  TopArtists = manageArtists(artistas.items, 10)
   // let TopPlaylists = manageData(playlists.items, 10)
-  popScore = popularityScore(artists.items, 20)  
+  popScore = popularityScore(artistas.items, 20)  
   } else {
     return <>
       <NavBar />
@@ -87,8 +87,8 @@ const Profile = ({userInfo, tracks, artists, playlists}) => {
               <div className='profile-top-songs'>
                 <div><h3>Your Top Songs Ever:</h3>
                     <ol>
-                      {TopTracks.map(p => (
-                        <li key={p}> {p}</li>
+                      {TopTracks.map(({name, artists}) => (
+                        <li key={Math.random() * 10}> <b>{name}</b> by {artists.map(artists => artists.name).join(', ')}</li>
                       ))}
                     </ol>
                 </div>

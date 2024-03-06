@@ -27,7 +27,7 @@ const Login = () => {
 
         try {
             const GetProfile = async () => {
-                const clientId = "7eedacef6955442a99007fcd1956ec94";
+                const clientId = ""; // Get your own client id from https://developer.spotify.com/documentation/web-api
                 const params = new URLSearchParams(window.location.search)
                 const code = params.get("code");
                 
@@ -43,7 +43,7 @@ const Login = () => {
                             console.log("playlists in worker: ", playlist)
 
                             const track = await fetchTracks(accessToken);
-                            console.log("tracks in worker: ", tracks)
+                            console.log("tracks in worker: ", track)
 
                             const artist = await fetchArtists(accessToken);
                             console.log("artists in worker:", artist); 
@@ -188,7 +188,7 @@ const Login = () => {
                 userInfo={userProfile} 
                 playlists={playlists} 
                 tracks={tracks} 
-                artists={artists} />
+                artistas={artists} />
             </>
         );
     } else {
