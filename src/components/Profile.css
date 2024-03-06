@@ -1,0 +1,48 @@
+body  {
+    background-color: #c0ffd6;
+}
+#home {
+    border-bottom: 0px;
+}
+#home:hover {
+    border-bottom: 3px solid #1DB954;
+    transition: 0.1s ease-in-out;
+}
+
+ol > li::marker {
+    font-weight: bold;
+  }
+
+
+.profile-container {
+    border: 3px solid #1DB954;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 40px;
+    background-color: #fff;
+}
+
+.profile-basic-details {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+}
+@media only screen and (max-width: 1100px) {
+    .profile-basic-details {
+        flex-direction: column;
+        
+    }
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    border: 1px solid #000;
+    overflow: hidden;
+}
+.profile-pic img {
+    object-fit: cover;
+    
+}

@@ -1,0 +1,32 @@
+.contact-info {
+    text-align: center;
+}
+
+.name {
+    line-height: 15px;
+}
+
+.reachme {
+    padding-top: 10px ;
+}
+.reachme-links {
+    display: flex;
+    width: 200px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 0 auto;
+}
+.reachme-links a {
+    text-decoration: none;
+    color: #000;
+}
+.reachme-links a i {
+    font-size: 50px;
+    color: black;
+}
+.reachme-links a span {
+    font-size: 20px;
+    text-decoration: underline;
+}
