@@ -9,9 +9,7 @@ body  {
     transition: 0.1s ease-in-out;
 }
 
-ol > li::marker {
-    font-weight: bold;
-  }
+
 
 
 .profile-container {
@@ -31,7 +29,7 @@ ol > li::marker {
 @media only screen and (max-width: 1100px) {
     .profile-basic-details {
         flex-direction: column;
-        
+
     }
 }
 
